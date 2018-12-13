@@ -248,7 +248,7 @@ public class TestReadExcel extends DefaultHandler {
                 flag = true;
             }
         } else {
-        	if(!"f".equals(name)&&nextDataType==CellDataType.NUMBER){
+        	if(!"f".equals(name)&&nextDataType==CellDataType.NUMBER){//格式控制应该可以用这个--------------
         		if((lastIndex.trim()).isEmpty()){
         			cellList.add(curCol, "");
                     curCol++;
@@ -275,7 +275,7 @@ public class TestReadExcel extends DefaultHandler {
                 	if(cellList.get(0) == null||"".equals(cellList.get(0).trim())){
                 		cellList.clear();
                 	}else{
-                		System.out.println(sheetIndex+":"+cellList.size()+"="+cellList);
+                		System.out.println("第"+sheetIndex+"页共:"+cellList.size()+"列，内容="+cellList);
                 	}
                     totalRows++;
                 }
